@@ -1,0 +1,33 @@
+<div class="bg-light">
+  <h1 class="text-center p-4">Our Specialties</h1>
+  <div class="container w-75">
+    <hr />
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+      <div class="pb-4" *ngFor="let val of menuArr; index as i">
+        <div class="card">
+          <img
+            src="{{ val.image }}"
+            class="card-img-top rounded"
+            alt="Product"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ val.product }}</h5>
+            <p class="card-text">{{ val.price | currency }}</p>
+            <p class="card-text">{{ val.ingredients }}</p>
+            <div *ngIf="val.availability; else elseBlock">
+              <button routerLink="/product/{{ i }}" class="btn btn-primary">
+                Details
+              </button>
+              <button (click)="addToCart()" class="btn btn-warning ms-4">
+                Order
+              </button>
+            </div>
+            <ng-template #elseBlock
+              ><p class="text-danger">Not available.</p></ng-template
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

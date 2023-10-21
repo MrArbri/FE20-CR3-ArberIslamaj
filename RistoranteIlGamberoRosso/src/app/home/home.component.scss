@@ -1,0 +1,61 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.myHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100vw;
+
+  overflow: hidden;
+
+
+  img {
+    position: relative;
+    aspect-ratio: 2/1;
+    border: 2px solid black;
+  }
+
+  h1 {
+    color: white;
+    position: absolute;
+    font-family: cursive;
+    top: 10rem;
+  }
+
+  h4 {
+    color: white;
+    position: absolute;
+    top: 15rem;
+
+  }
+
+  #menu {
+    position: absolute;
+    left: 34rem;
+    top: 20rem;
+  }
+
+  #reservation {
+    position: absolute;
+    left: 40rem;
+    top: 20rem;
+
+
+  }
+}
+
+.container {
+
+  h1 {
+    font-family: cursive;
+  }
+
+  .myFood {
+    display: flex;
+    justify-content:center;
+  }
+}
