@@ -1,9 +1,21 @@
+.about {
+  padding: 4rem 0;
+}
+
 .container {
   color: black;
+  border: 2px solid black;
 }
 .container img {
   position: relative;
 }
 .container h1 {
   font-family: cursive;
+  text-shadow: 3px 3px 3px #ababab;
+}
+.container .hand {
+  font-family: "Sofia", sans-serif;
+}
+.container p {
+  font-size: 20px;
 }/*# sourceMappingURL=about-us.component.css.map */

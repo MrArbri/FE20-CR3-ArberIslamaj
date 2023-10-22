@@ -1,13 +1,8 @@
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
 .myHero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 500px;
   width: 100vw;
   overflow: hidden;
 }
@@ -16,32 +11,50 @@
   aspect-ratio: 2/1;
   border: 2px solid black;
 }
-.myHero h1 {
-  color: white;
+.myHero table {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.371);
+  padding: 500px 100vh;
+}
+.myHero #myH1 {
+  color: white;
   font-family: cursive;
-  top: 10rem;
+  text-shadow: 3px 3px 3px #ababab;
+  display: flex;
+  justify-content: center;
 }
-.myHero h4 {
+.myHero #myH4 {
+  display: flex;
+  justify-content: center;
   color: white;
-  position: absolute;
-  top: 15rem;
 }
-.myHero #menu {
-  position: absolute;
-  left: 34rem;
-  top: 20rem;
-}
-.myHero #reservation {
-  position: absolute;
-  left: 40rem;
-  top: 20rem;
+.myHero #btn {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
 }
 
 .container h1 {
   font-family: cursive;
+  text-shadow: 3px 3px 3px #ababab;
 }
-.container .myFood {
-  display: flex;
-  justify-content: center;
+.container #myFood {
+  border: 2px solid black;
+  margin-bottom: 2rem;
+}
+.container #dinnerImg {
+  padding-top: 2rem;
+  width: 25rem;
+}
+.container #dinnerTxt h2 {
+  font-family: cursive;
+  text-shadow: 3px 3px 3px #ababab;
+}
+.container #h2Special {
+  font-family: cursive;
+  text-shadow: 3px 3px 3px #ababab;
+  padding-top: 2rem;
+}
+.container #pSpecial {
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=home.component.css.map */
