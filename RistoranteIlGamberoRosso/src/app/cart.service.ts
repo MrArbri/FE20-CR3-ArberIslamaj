@@ -7,6 +7,7 @@ import { Imenu } from './Imenu';
 export class CartService {
   cart: Imenu[] = [];
 
+
   constructor() { }
 
   addToCart(obj: Imenu){
@@ -23,6 +24,18 @@ export class CartService {
       total += val.price ;
     })
     return total
+  }
+
+  calcTenPercentOfTotal(): number {
+    return this.calcTotal() * 0.1;
+  }
+
+  calc15PercentDiscount(): number {
+    return this.calcTotal() * 0.15;
+  }
+
+  discountTotal(): number {
+    return this.calcTotal() - this.calc15PercentDiscount();
   }
 
   clearCart(){

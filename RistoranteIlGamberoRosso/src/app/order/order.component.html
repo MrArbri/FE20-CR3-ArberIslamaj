@@ -1,5 +1,8 @@
 <div class="container pt-2 mt-2 mb-2 border border-dark">
   <h2 class="bg-body-secondary">Products you have chosen:</h2>
+  <h4 class="text-danger">
+    If you spend more than 40€ for our products we offer 15% discount.
+  </h4>
   <div class="border-bottom" *ngFor="let val of cart">
     <p>{{ val.product }}</p>
     <img
@@ -9,15 +12,24 @@
       width="100"
       height="100"
     />
-    <p>{{ val.price | currency }}</p>
+    <p>{{ val.price | currency : "EUR" }}</p>
   </div>
   <div class="bg-body-secondary border border-black mb-2">
     <h1 class="">Summary</h1>
-    <h2>Price: {{ total | currency }}</h2>
-    <h2>Service:</h2>
-    <h2>-15% off:</h2>
+    <h2>Price: {{ total | currency : "EUR" }}</h2>
+    <h2>Service: {{ calcTenPercentOfTotal | currency : "EUR" }}</h2>
     <hr />
-    <h2>Total: {{ total | currency }}</h2>
+
+    <ng-template #elseBlock>
+      <h2>Total: {{ total | currency : "EUR" }}</h2>
+    </ng-template>
+
+    <ng-template [ngIf]="total >= 40" [ngIfElse]="elseBlock">
+      <h2>-15% off: {{ calc15PercentDiscount | currency : "EUR" }}</h2>
+      <h2>Total: {{ discountTotal | currency : "EUR" }}</h2>
+    </ng-template>
+
+    <hr />
   </div>
 </div>
 <form class="m-3" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">

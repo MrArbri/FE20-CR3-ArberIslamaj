@@ -17,8 +17,6 @@ export class MenuComponent implements OnInit{
   menu: Imenu = {} as Imenu;
 
 
-
-
   addToCart(products : Imenu){
     alert("Product added successfully.");
     this.CS.addToCart(products);

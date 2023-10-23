@@ -12,7 +12,7 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ val.product }}</h5>
-            <p class="card-text">{{ val.price | currency }}</p>
+            <p class="card-text">{{ val.price | currency : "EUR" }}</p>
             <p class="card-text">{{ val.ingredients }}</p>
             <div *ngIf="val.availability; else elseBlock">
               <button routerLink="/product/{{ i }}" class="btn btn-primary">
