@@ -26,22 +26,17 @@
     color: white;
     font-family: cursive;
     text-shadow: 3px 3px 3px #ababab;
-    display: flex;
-    justify-content: center;
-
+    padding-top: 2rem;
   }
 
   #myH4 {
-    display: flex;
-    justify-content: center;
     color: white;
-
   }
 
   #btn {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 1rem;
+    padding: 1rem 0 1rem 0;
   }
 }
 
@@ -61,7 +56,7 @@
   #dinnerImg {
     // position: relative;
     padding-top: 2rem;
-    width: 25rem;
+    width: 20rem;
   }
 
   #dinnerTxt {

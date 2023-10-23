@@ -15,13 +15,13 @@ export class MenuComponent implements OnInit{
   cart: Imenu[] = [];
   total: number = 0;
   menu: Imenu = {} as Imenu;
-  id: number = 0;
 
 
 
-  addToCart(){
+
+  addToCart(products : Imenu){
     alert("Product added successfully.");
-    this.CS.addToCart(this.menu);
+    this.CS.addToCart(products);
   }
   checkoutForm = this.fb.group({
     name: '',
@@ -46,10 +46,6 @@ export class MenuComponent implements OnInit{
   ngOnInit(): void {
     this.cart = this.CS.getCart();
     this.total = this.CS.calcTotal();
-    this.route.params.subscribe((param: Params) => {
-      this.id = +param["id"];
-      this.menu = menu[this.id];
-    })
   }
 }
 
