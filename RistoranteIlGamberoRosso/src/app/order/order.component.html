@@ -18,21 +18,22 @@
     <h1 class="">Summary</h1>
     <h2>Price: {{ total | currency : "EUR" }}</h2>
     <h2>Service: {{ calcTenPercentOfTotal | currency : "EUR" }}</h2>
-    <hr />
 
     <ng-template #elseBlock>
-      <h2>Total: {{ total | currency : "EUR" }}</h2>
+      <h2 class="border-top border-black">
+        Total: {{ total | currency : "EUR" }}
+      </h2>
     </ng-template>
 
     <ng-template [ngIf]="total >= 40" [ngIfElse]="elseBlock">
       <h2>-15% off: {{ calc15PercentDiscount | currency : "EUR" }}</h2>
-      <h2>Total: {{ discountTotal | currency : "EUR" }}</h2>
+      <h2 class="border-top border-black">
+        Total: {{ discountTotal | currency : "EUR" }}
+      </h2>
     </ng-template>
-
-    <hr />
   </div>
 </div>
-<form class="m-3" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+<form class="m-5" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
   <div>
     <h1 class="p-3 myStyle">Order Form</h1>
     <p>Insert your correct name and your address.</p>
@@ -56,5 +57,7 @@
     />
   </div>
   <br />
-  <button class="btn btn-success" type="submit">Purchase</button>
+  <button (click)="clearCart()" class="btn btn-success" type="submit">
+    Purchase
+  </button>
 </form>

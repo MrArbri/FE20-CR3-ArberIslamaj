@@ -22,7 +22,8 @@
   }
 
   #myH1 {
-
+    display: flex;
+    justify-content: center;
     color: white;
     font-family: cursive;
     text-shadow: 3px 3px 3px #ababab;
@@ -31,6 +32,8 @@
 
   #myH4 {
     color: white;
+    display: flex;
+    justify-content: center;
   }
 
   #btn {

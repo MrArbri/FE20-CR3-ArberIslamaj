@@ -4,6 +4,7 @@
     <hr />
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
       <div class="pb-4" *ngFor="let val of menuArr; index as i">
+        <!-- <a class="text-decoration-none" routerLink="/product/{{ i }}"> -->
         <div class="card">
           <img
             src="{{ val.image }}"
@@ -27,6 +28,7 @@
             >
           </div>
         </div>
+        <!-- </a> -->
       </div>
     </div>
   </div>

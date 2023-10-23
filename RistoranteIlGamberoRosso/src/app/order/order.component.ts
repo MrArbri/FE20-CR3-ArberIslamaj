@@ -26,6 +26,7 @@ export class OrderComponent implements OnInit {
   clearCart() {
     window.alert('Your cart has been cleared');
     this.cart = this.CS.clearCart();
+    this.total = 0;
   }
 
   onSubmit() {
@@ -43,7 +44,5 @@ export class OrderComponent implements OnInit {
     this.calcTenPercentOfTotal = this.CS.calcTenPercentOfTotal();
     this.calc15PercentDiscount = this.CS.calc15PercentDiscount();
     this.discountTotal = this.CS.discountTotal();
-
-
   }
 }
